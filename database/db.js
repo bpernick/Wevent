@@ -64,7 +64,7 @@ module.exports.deleteEvent = (eventId, callback) => {
 };
 
 // routes for event info
-
+//routes for event info
 module.exports.getEventInfoForConditionalRender = (eventId, userId, cb) => {
   const query = 'SELECT host_id, private, (SELECT pending from users_events_attending WHERE event_id = ? AND user_id = ?) AS pending FROM events WHERE event_id = ?';
   // const query = 'SELECT host_id, private FROM events WHERE event_id = ?';
